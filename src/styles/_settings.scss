@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+$font-main: "Lato", sans-serif;
+
+// Palette sombre
+$bg-dark: #1e1f24;
+$bg-light: #2b2c31;
+$accent: #4fc3f7;
+$accent-2: #ff4f87;
+$text-light: #f1f1f1;
+$text-muted: #b0b0b0;
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-dark;
+  color: $text-light;
+  font-family: $font-main;
+  line-height: 1.6;
+  min-height: 100vh;
+  // padding: 1rem;
+}
+
+// Responsive typography and containers
+h1,
+h2,
+h3 {
+  color: $accent;
+}
+
+a {
+  color: $accent-2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+button {
+  font-family: $font-main;
+  background-color: $accent;
+  color: $bg-dark;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: lighten($accent, 10%);
+  }
+}
+
+// Utilities
+.text-muted {
+  color: $text-muted;
+}

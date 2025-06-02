@@ -1,0 +1,83 @@
+.countries {
+  text-align: center;
+  padding: 1rem;
+
+  .radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $bg-light;
+    border-radius: 20px;
+    padding: 1.5rem;
+    color: $text-light;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+
+    input[type="range"] {
+      width: 100%;
+      max-width: 400px;
+      // margin-bottom: 1rem;
+      accent-color: $accent;
+    }
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      margin: 0.3rem 0.6rem;
+
+      input[type="radio"] {
+        accent-color: $accent-2;
+        cursor: pointer;
+      }
+
+      label {
+        margin-left: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  button {
+    margin: 0rem auto 2rem;
+    background: $accent-2;
+    color: $bg-dark;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+
+    &:hover {
+      background: lighten($accent-2, 10%);
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.2rem;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul > * {
+    display: flex;
+    justify-content: center; // ✅ Centre la carte dans la cellule
+  }
+}
