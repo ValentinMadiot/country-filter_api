@@ -1,5 +1,5 @@
 <div align="center">  
-  <a href="https://country-filter-app.vercel.app" target="_blank">  
+  <a href="https://country-filter-api.vercel.app/" target="_blank">  
     <img src=".docs/preview.png" alt="Aperçu du projet"/>  
   </a>  
   </br></br>  
