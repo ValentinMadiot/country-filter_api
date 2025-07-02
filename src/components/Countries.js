@@ -7,11 +7,13 @@ const Countries = () => {
   const [rangeValue, setRangeValue] = useState(36);
   const [selectedRadio, setSelectedRadio] = useState("");
   const radios = ["Africa", "America", "Asia", "Europe", "Oceania"];
-  // Le useEffect se joue lorsque le composant est monté
+  const FIELDS = "translations,capital,population,flags,continents,cca3";
+
   useEffect(() => {
     axios
-      .get("https://restcountries.com/v3.1/all")
-      .then((res) => setData(res.data));
+      .get(`https://restcountries.com/v3.1/all?fields=${FIELDS}`)
+      .then((res) => setData(res.data))
+      .catch((err) => console.error("API error:", err));
   }, []);
 
   return (
@@ -25,7 +27,7 @@ const Countries = () => {
           onChange={(e) => setRangeValue(e.target.value)}
         />
         {radios.map((continent) => (
-          <li>
+          <li key={continent}>
             <input
               type="radio"
               id={continent}
@@ -44,11 +46,16 @@ const Countries = () => {
       )}
       <ul>
         {data
-          .filter((country) => country.continents[0].includes(selectedRadio))
+          .filter((country) =>
+            selectedRadio ? country.continents[0].includes(selectedRadio) : true
+          )
           .sort((a, b) => b.population - a.population)
           .slice(0, rangeValue)
-          .map((country, index) => (
-            <Card key={index} country={country} />
+          .map((country) => (
+            <Card
+              key={country.cca3 /* code ISO-3 unique */}
+              country={country}
+            />
           ))}
       </ul>
     </div>
