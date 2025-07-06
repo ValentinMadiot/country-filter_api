@@ -15,14 +15,18 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-**Country Filter App** est une application React interactive qui permet de découvrir et filtrer les pays du monde en fonction de leur **continent** et de leur **population**. Elle propose une interface simple, fluide et responsive, avec un **design en dark mode**.
+**Country Filter App** est une application React interactive qui permet de découvrir et filtrer les pays du monde en fonction de leur **continent** et de leur **population**.
+
+Les données proviennent en temps réel de l’API publique **REST Countries v3.1**.
+
+Elle propose une interface clair, fluide et responsive, avec un **design sobre en dark mode**.
 
 ## <br /> <a name="technologies">🛠️ Technologies</a>
 
 - React (Create React App)
-- SCSS
-- Axios
-- Vite ou Webpack (CRA)
+- React Router
+- SCSS pour le style
+- Axios pour les requêtes HTTP
 - API [REST Countries v3.1](https://restcountries.com/v3.1/all)
 - Déploiement sur [Vercel](https://country-filter-api.vercel.app/)
 
@@ -30,30 +34,34 @@
 
 - Filtrer les pays par continent : Africa, America, Asia, Europe, Oceania
 - Curseur de population minimale pour afficher les pays les plus peuplés
-- Affichage des drapeaux
-- Affichage de la capitale et de la population totale
-- Design responsive et en mode sombre
+- Affichage du drapeau, de la capitale et de la population
+- Animation au survol des cartes
+- Interface responsive et en mode sombre
 
 ## <br /> <a name="installation">🚀 Installation</a>
 
-### ✅ Pré-requis
+### ✅ Prérequis
 
-- 🛠️ **[Git](https://git-scm.com/)**
-- 🔧 **[Node.js](https://nodejs.org/fr/)**
-- 📦 **[npm](https://www.npmjs.com/)**
+- [Git](https://git-scm.com/) &nbsp;—&nbsp; Système de gestion de versions
+- [Node.js](https://nodejs.org/fr) &nbsp;—&nbsp; Exécuteur local de scripts JavaScript
+- [npm](https://www.npmjs.com/) &nbsp;—&nbsp; Gestionnaire de paquets JavaScript
+- [Google Chrome](https://www.google.com/) &nbsp;—&nbsp; Navigateur moderne
+- [Visual Studio Code](https://code.visualstudio.com/) &nbsp;—&nbsp; Éditeur de code
 
 ### 📥 Cloner le projet
 
 ```bash
 git clone https://github.com/ValentinMadiot/country-filter_api.git
+cd country-filter_api
 ```
 
-### ▶️ Lancer l’application
+### ▶️ Lancer le projet
 
-#### Frontend (port : 3000)
+#### Frontend
 
 ```bash
-cd country-filter_api
 npm install
 npm start
 ```
+
+Frontend disponible sur : `http://localhost:3000`
